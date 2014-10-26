@@ -16,6 +16,13 @@ public class MovieDAO {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
+	private Integer num = 0;
+	
+	public MovieDAO() {
+		System.out.println("Entrou no construtor....");
+		System.out.println("MovieDAO.MovieDAO()");
+	}
+	
 	@SuppressWarnings("unchecked")
 	public void teste() {
 		
@@ -24,11 +31,7 @@ public class MovieDAO {
 		System.out.println(movies);
 		System.out.println(Arrays.toString(movies.toArray()));
 		
-	}
-	
-	public static void main(String[] args) {
-		
-		
+		System.out.println("Número: "+(++num));
 		
 	}
 	

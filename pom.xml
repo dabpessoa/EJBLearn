@@ -19,7 +19,17 @@
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
 			<version>7.0</version>
-			<scope>provided</scope>
+<!-- 			<scope>provided</scope> -->
+			<exclusions>
+				<exclusion>
+					<groupId>javax.faces</groupId>
+      				<artifactId>javax.faces-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.glassfish</groupId>
+      				<artifactId>javax.faces</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 

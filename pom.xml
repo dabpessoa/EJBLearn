@@ -4,5 +4,8 @@
   <artifactId>cinematizando</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>Cinematizando</name>
+  <name>cinematizando</name>
+  
+  
+  
 </project>

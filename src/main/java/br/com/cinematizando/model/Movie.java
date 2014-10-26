@@ -3,8 +3,10 @@ package br.com.cinematizando.model;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="movie", schema="cinematizando")
 public class Movie extends Model {
 
 	private String originalTitle;
@@ -44,6 +46,13 @@ public class Movie extends Model {
 
 	public void setSynopsis(String synopsis) {
 		this.synopsis = synopsis;
+	}
+
+	@Override
+	public String toString() {
+		return "Movie [originalTitle=" + originalTitle + ", translatedTitle="
+				+ translatedTitle + ", release=" + release + ", synopsis="
+				+ synopsis + "]";
 	}
 	
 }

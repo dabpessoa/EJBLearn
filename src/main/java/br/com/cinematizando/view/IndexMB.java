@@ -1,4 +1,4 @@
-package br.com.cinematizanco.view;
+package br.com.cinematizando.view;
 
 import java.io.Serializable;
 

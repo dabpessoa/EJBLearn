@@ -5,7 +5,14 @@
 	<artifactId>cinematizando</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>Cinematizando</name>
+	<name>cinematizando</name>
+
+	<developers>
+		<developer>
+			<name>Diego Augusto</name>
+			<email>dabpessoa@gmail.com</email>
+		</developer>
+	</developers>
 
 	<dependencies>
 		<dependency>

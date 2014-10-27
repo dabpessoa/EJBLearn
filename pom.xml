@@ -19,13 +19,14 @@
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
 			<version>7.0</version>
-			<scope>provided</scope>
+ 			<scope>provided</scope>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.wildfly</groupId>
 			<artifactId>wildfly-ejb3</artifactId>
 			<version>8.1.0.Final</version>
+			<scope>provided</scope>
 		</dependency>
 		
 	</dependencies>

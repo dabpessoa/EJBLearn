@@ -13,23 +13,22 @@ import org.jboss.ejb3.annotation.Pool;
 import br.com.cinematizando.model.Movie;
 
 @Stateless
-@Pool(value="slsb-strict-max-pool")
+@Pool(value = "slsb-strict-max-pool")
 public class MovieDAO {
 
-	@PersistenceContext
-	private EntityManager entityManager;
-	
-	private Integer i = 0;
-	
-	@SuppressWarnings("unchecked")
-	public void teste() {
-	   System.out.println( ++i );
-		Query q = entityManager.createQuery("from Movie"); 
-		List<Movie> movies = q.getResultList();
-		System.out.println(Arrays.toString(movies.toArray()));
-		
-	}
-	
-	
-	
+  @PersistenceContext
+  private EntityManager entityManager;
+
+  private Integer i = 0;
+
+  @SuppressWarnings("unchecked")
+  public void teste() {
+    System.out.println(++i);
+    Query q = entityManager.createQuery("from Movie");
+    List<Movie> movies = q.getResultList();
+    System.out.println(Arrays.toString(movies.toArray()));
+  }
+
+
+
 }

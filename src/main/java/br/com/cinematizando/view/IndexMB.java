@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import br.com.cinematizando.dao.MovieDAO;
+import br.com.cinematizando.dao.MovieDAONotPool;
 
 @Named
 @ViewScoped
@@ -16,9 +17,13 @@ public class IndexMB implements Serializable{
   
   @Inject
   private MovieDAO dao;
+  
+  @Inject
+  private MovieDAONotPool daoNotPool;
 
   public String getName(){
 	dao.teste();
+	daoNotPool.teste();
     return "AEEE";
   }
   

@@ -8,13 +8,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import org.jboss.ejb3.annotation.Pool;
-
 import br.com.cinematizando.model.Movie;
 
 @Stateless
-@Pool(value = "slsb-strict-max-pool")
-public class MovieDAO {
+public class MovieDAONotPool {
 
   @PersistenceContext
   private EntityManager entityManager;
@@ -28,7 +25,6 @@ public class MovieDAO {
     List<Movie> movies = q.getResultList();
     System.out.println(Arrays.toString(movies.toArray()));
   }
-
 
 
 }

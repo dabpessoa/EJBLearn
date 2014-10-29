@@ -12,9 +12,14 @@
 			<name>Diego Augusto</name>
 			<email>dabpessoa@gmail.com</email>
 		</developer>
+		<developer>
+			<name>Efraim Gentil</name>
+			<email>efraim.gentil@gmail.com</email>
+		</developer>
 	</developers>
 
 	<dependencies>
+	
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>

@@ -1,5 +1,6 @@
 target
 .settings
 .project
+.metadata
 bin
 .classpath

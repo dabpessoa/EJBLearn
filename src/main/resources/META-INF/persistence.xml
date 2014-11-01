@@ -4,9 +4,11 @@
         version="2.0">
         
     <persistence-unit name="cinematizando_pu" transaction-type="JTA">
-       
        <jta-data-source>java:/cinematizandoDS</jta-data-source>
-       
+    </persistence-unit>
+    
+    <persistence-unit name="cinematizando_pu2" transaction-type="JTA">
+       <jta-data-source>java:/cinematizandoDS</jta-data-source>
     </persistence-unit>
     
 </persistence>

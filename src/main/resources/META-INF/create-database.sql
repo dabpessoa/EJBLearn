@@ -1,3 +1,4 @@
+create schema cinematizando;
 create table cinematizando.movie(
     id bigserial
     ,originaltitle varchar(255)
@@ -5,4 +6,4 @@ create table cinematizando.movie(
     ,"release" date
     ,synopsis text
 );
-alter table cinematizando.movie add primary key (id) ;
+alter table cinematizando.movie add primary key (id);

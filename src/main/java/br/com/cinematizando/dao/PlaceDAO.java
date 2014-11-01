@@ -3,8 +3,8 @@ package br.com.cinematizando.dao;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 import br.com.cinematizando.model.Place;
 
@@ -18,7 +18,7 @@ import br.com.cinematizando.model.Place;
 @Stateless
 public class PlaceDAO {
 
-	@PersistenceContext
+	@Inject
 	private EntityManager entityManager;
 	
 	@SuppressWarnings("unchecked")

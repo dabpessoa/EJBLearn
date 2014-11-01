@@ -1,34 +1,20 @@
 package br.com.cinematizando.dao;
 
-import java.util.Arrays;
 import java.util.List;
 
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-
-import org.jboss.ejb3.annotation.Pool;
+import javax.annotation.PostConstruct;
 
 import br.com.cinematizando.model.Movie;
 
-@Stateless
-@Pool(value = "slsb-strict-max-pool")
-public class MovieDAO {
+public class MovieDAO extends AbstractDao<Movie> {
 
-  @PersistenceContext
-  private EntityManager entityManager;
-
-  private Integer i = 0;
-
-  @SuppressWarnings("unchecked")
-  public void teste() {
-    System.out.println(++i);
-    Query q = entityManager.createQuery("from Movie");
-    List<Movie> movies = q.getResultList();
-    System.out.println(Arrays.toString(movies.toArray()));
-  }
-
-
-
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8686390125721906475L;
+	
+	@PostConstruct
+	protected void initialize() {
+		System.out.println( entityManager );
+	}
 }

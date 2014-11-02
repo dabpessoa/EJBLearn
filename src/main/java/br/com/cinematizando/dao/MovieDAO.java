@@ -1,6 +1,6 @@
 package br.com.cinematizando.dao;
 
-import java.util.List;
+import java.util.Arrays;
 
 import javax.annotation.PostConstruct;
 
@@ -15,6 +15,7 @@ public class MovieDAO extends AbstractDao<Movie> {
 	
 	@PostConstruct
 	protected void initialize() {
-		System.out.println( entityManager );
+		
+		System.out.println( find("from Movie where id in (?)", new Object[] { Arrays.asList(1l, 2l, 3l) }) );
 	}
 }

@@ -66,33 +66,31 @@ public abstract class AbstractDao<Entity> implements Serializable {
 			sql = sql.replaceFirst("\\?\\d*", ":p_" + index++);
 		}
 		
-		// Query q = entityManager.createQuery(sql);
+		Query q = entityManager.createQuery(sql);
 		
-		final Matcher matcher = Pattern.compile("(\\:\\w+)").matcher(sql);
+		final Matcher matcher = Pattern.compile("\\:(\\w+)").matcher(sql);
 		
 		Map<String, Object> map = new HashMap<String, Object>(0);
 		index = 0;
 		while(matcher.find()) {
-			String key = matcher.group(); 
+			String key = matcher.group(1); 
 			if( !map.containsKey(key) ){
 				map.put(key, params[index++]);
 			}
 		}
 		
 		for(Map.Entry<String, Object> entry : map.entrySet()) {
-			System.out.println( entry );
+			q.setParameter(entry.getKey(), entry.getValue());
 		}
 		
-		//return q.getResultList();
-		
-		return null;
+		return q.getResultList();
 	}
 	
 	public static void main(String[] args) {
 
-		String sql = "from Movie where id = :identifier and name = ? and other = :identifier and param1 = ?1";
+		String sql = "from Movie where id = :identifier";
 		
-		new AbstractDao<Movie>( ) {}.find(sql, Arrays.asList(1,2,3).toArray());
+		new AbstractDao<Movie>( ) {}.find(sql, new Object[] { Arrays.asList(1, 2, 3) });
 		
 	}
 	

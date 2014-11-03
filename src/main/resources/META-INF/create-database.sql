@@ -3,7 +3,7 @@
 ------------------------
 
 -- create table movie ------
-drop tabel cinematizando.movie;
+drop table cinematizando.movie;
 create table cinematizando.movie (
      id bigserial not null
     ,originaltitle varchar(255)
@@ -15,7 +15,7 @@ alter table cinematizando.movie add primary key (id);
 ----------------------------
 
 -- create table place ----
-drop table cinematizando.place;
+drop table if exists cinematizando.place;
 create table cinematizando.place (
    id bigserial NOT NULL
   ,name character varying(150)

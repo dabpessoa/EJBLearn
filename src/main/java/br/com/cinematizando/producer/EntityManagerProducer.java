@@ -2,6 +2,7 @@ package br.com.cinematizando.producer;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
+import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -23,6 +24,10 @@ public class EntityManagerProducer {
 	@RequestScoped
 	public EntityManager getEntityManager() {
 		return factory.createEntityManager();
+	}
+	
+	public void destroyEntityManager(@Disposes EntityManager entityManager){
+	  entityManager.close();
 	}
 	
 //	@Produces @AnotherEntityManager

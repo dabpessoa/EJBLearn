@@ -21,7 +21,6 @@ import br.com.cinematizando.model.Movie;
 import br.com.cinematizando.model.Place;
 
 @SuppressWarnings("all")
-
 public abstract class AbstractDao<Entity> implements Serializable {
 	
 	private Class<Entity> klass;

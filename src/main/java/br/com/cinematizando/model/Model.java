@@ -1,14 +1,18 @@
 package br.com.cinematizando.model;
 
+import java.io.Serializable;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class Model {
+public class Model implements Serializable {
 
-	@Id
+  private static final long serialVersionUID = -1455727669154017017L;
+  
+  @Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+<h:head></h:head>
+<h:body>
+	<p>To consumer works you need to configure the client-id on
+		declaration of the jms factory in standalone-full.xml see:</p>
+	<textarea rows="10" cols="60" disabled="disabled">
+<connection-factory name="InVmConnectionFactory">
+  <connectors>
+    <connector-ref connector-name="in-vm" />
+  </connectors>
+  <entries>
+    <entry name="java:/ConnectionFactory" />
+  </entries>
+  <client-id>HI</client-id>
+</connection-factory>
+	</textarea>
+
+	<h:form>
+		<input type="text" jsf:value="#{consumer2MB}" />
+	</h:form>
+</h:body>
+</html>

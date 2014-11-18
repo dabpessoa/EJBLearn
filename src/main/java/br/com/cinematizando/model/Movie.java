@@ -9,7 +9,9 @@ import javax.persistence.Table;
 @Table(name="movie", schema="cinematizando")
 public class Movie extends Model {
 
-	private String originalTitle;
+  private static final long serialVersionUID = -8564717214633193056L;
+  
+  private String originalTitle;
 	private String translatedTitle;
 	private Date release;
 	private String synopsis;

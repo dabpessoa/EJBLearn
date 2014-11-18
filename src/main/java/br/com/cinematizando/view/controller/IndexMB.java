@@ -8,7 +8,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import br.com.cinematizando.dao.MovieDAO;
-import br.com.cinematizando.qualifier.AnotherEntityManager;
 
 @Named
 @ViewScoped

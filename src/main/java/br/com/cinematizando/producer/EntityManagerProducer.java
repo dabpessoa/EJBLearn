@@ -6,9 +6,10 @@ import javax.enterprise.inject.Disposes;
 import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceUnit;
 
-@ApplicationScoped
+@RequestScoped
 public class EntityManagerProducer {
 
 //	@PersistenceContext(unitName = "cinematizando_pu")

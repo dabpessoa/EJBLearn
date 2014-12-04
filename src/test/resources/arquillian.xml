@@ -5,7 +5,12 @@
         http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
     <container qualifier="jbossas-managed" default="true">
         <configuration>
+        	<!-- 
+        		Points to your java home directory, that is not realy needed but i don't
+        		know why, the javaHome was poiting to a non existent java distro 
+        	 -->
         	<property name="javaHome">/usr/lib/jvm/java-7-oracle</property>
+        	<!-- Points to your JBOSS HOME directory -->
             <property name="jbossHome">/home/efraim/Servidores/wildfly-8.1.0.Final/</property>
         </configuration>
     </container>

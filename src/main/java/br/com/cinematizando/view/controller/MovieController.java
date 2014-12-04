@@ -9,7 +9,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import br.com.cinematizando.model.Movie;
-import br.com.cinematizando.service.MovieServiceImpl;
 import br.com.cinematizando.service.MovieService;
 
 @Named

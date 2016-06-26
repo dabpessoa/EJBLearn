@@ -1,4 +1,4 @@
-cinematizando
+EJB
 =============
 
 Aprendendo EJB.
